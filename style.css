@@ -1,0 +1,26 @@
+
+body {
+    margin-top: 20px;
+    font-family: "Cairo", sans-serif;
+}
+  
+footer {
+    margin-top: 1em;
+    background-color: #e7e7e7;
+}
+
+.textbox1 {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.imagebox1 {
+    padding: 15px;
+    display: block;
+    margin: auto;
+    background-color: lightgrey;
+    border-radius: 3px;
+}
