@@ -9,6 +9,13 @@ footer {
     background-color: #e7e7e7;
 }
 
+.gridcontainer {
+    display: grid;
+    grid-gap: 10px;
+    background-color: darkgrey;
+    padding: 10px;
+}
+
 .textbox1 {
     text-align: center;
     padding: 20px;
@@ -22,5 +29,5 @@ footer {
     display: block;
     margin: auto;
     background-color: lightgrey;
-    border-radius: 3px;
+    border-radius: 10px;
 }
