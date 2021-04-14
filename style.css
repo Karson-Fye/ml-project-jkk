@@ -45,6 +45,21 @@ footer {
     font-weight: bold;
 }
 
+.title2 {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    width: 60%;
+    font-size: x-large;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .imagebox1 {
     padding: 15px;
     display: block;
