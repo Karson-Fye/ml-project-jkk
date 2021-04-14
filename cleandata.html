@@ -1,63 +1,129 @@
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <head>
-        <title></title>
-        <link href="" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
-        <link href="style.css" rel="stylesheet">
-    </head>
+  <head>
+      <title></title>
+      <link href="" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+      <link href="style.css" rel="stylesheet">
 
-    <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">The Titanic</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="data.html">DataSet and Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cleandata.html">Data Cleaning and Visualization</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="validation.html">Feature Validation</a>
-              </li>
+      <style>
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+      </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">The Titanic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="algorithms.html">Prediction Algorithms</a>
+              <a class="nav-link" href="data.html">DataSet and Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="results.html">Results</a>
+              <a class="nav-link" href="cleandata.html">Data Cleaning and Visualization</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="survive.html">Would You Survive?</a>
+              <a class="nav-link" href="validation.html">Feature Validation</a>
             </li>
-            </ul>
-          </div>
-      </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="algorithms.html">Prediction Algorithms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="survive.html">Would You Survive?</a>
+          </li>
+          </ul>
+        </div>
+    </nav>
 
-      <!--CODE HERE-->
+    <!--CODE HERE-->
+    <div class="title">
+      Cleaning Data and Data Visualization
+    </div>
 
+    <div class="gridcontainer" style="background-color: whitesmoke;">
+      <div class="textbox1" style="grid-column: 1/3; grid-row: 1/2;">
+        <h5><b>Removing Noise and Uneccesary Features</b></h5>
+      </div>
+      <div class="textbox2" style="grid-column: 2/6; grid-row: 2/3;">
+        Discuss resoning behind removing each feature.
+        - name
+        - home.dest
+        - body
+        - cabin
+        - boat
+      </div>
+    </div>
 
-      <!--TO HERE-->
+    <div class="gridcontainer">
+      <h5 class="textbox1" style="grid-row: 1;"><b>New Data With Removed Features</b></h5>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+      <img src="images/data_no_features.png" alt="data head with updated features" 
+        style="margin: auto; width: 75%; margin-bottom: 20px; grid-row: 2/3;">
+    </div>
+
+    <div class="gridcontainer" style="background-color: whitesmoke;">
+      <h5 class="textbox1" style="grid-row: 1; grid-column: 1/3;"><b>Cleaned Data</b></h5>
+
+      <img src="images/cleaned_data.png" alt="data head with updated features" 
+        style="margin: auto; width: 75%; min-width: 700px; margin-bottom: 20px; grid-row: 2/3; grid-column: 1/3;">
+
+      <div class="textbox1" style="grid-row: 1/5; grid-column: 3/5; max-width: 500px;">
+        Explain cleaning _______________
+      </div>
+    </div>
+
+    <div class="gridcontainer">
+      <div class="textbox1">
+        <h5><b>Feature Visualization</b></h5>
+      </div>
+        <div class="row">
+        <img src="images/embarked.png" alt="embarked">
+        <img src="images/fare.png" alt="fare">
+        <img src="images/parch.png" alt="parch">
+        <img src="images/pclass.png" alt="pclass">
+        <img src="images/sex.png" alt="sex">
+        <img src="images/sibsp.png" alt="sibsp">
+        <img src="images/ticket.png" alt="ticket">
+        <img src="images/age.png" alt="age">
+      </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Titanic Project
+        <br>
+        Made by Karson Fye, Jackson Warren, and Katelynn Schwerdtfeger
+      </div>
+    </footer>
+
+    <!--TO HERE-->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
   </body>
 </html>

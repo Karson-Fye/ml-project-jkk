@@ -24,6 +24,27 @@ footer {
     border-radius: 10px;
 }
 
+.textbox2 {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    background-color: darkgrey;
+    color: white;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    font-size: xx-large;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .imagebox1 {
     padding: 15px;
     display: block;
