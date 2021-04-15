@@ -57,19 +57,26 @@
     </div>
     <div class="gridcontainer" style="background-color: gray;">
       <div class="textbox1" style="grid-row: 1/3; grid-column: 1/4;">
-        Info on rf
+        Random Forest splits the data into growing trees, using minute differences to classify and learn which 
+        qualities generates teh expected outcome from each fearture. <br> <br>
+        The graph below (4.1) shows the <span style="color: darkgreen;">tree depth (n estimators)</span>
+        that predicts the at the <span style="color: darkgreen;">highest accuracy</span>. <br> <br>
+        The graph on the right (4.2) shows the <span style="color: darkgreen;">
+          importance of each feature</span> in its classifications. 
       </div>
 
       <div class="imagebox1" style="grid-row: 3/4; grid-column: 1/4;">
         <img src="images/rf_error.png" alt="rf_error">
+        <p>Figure 4.1: Graph showing the error value based on n estimators.</p>
       </div>
 
-      <div class="imagebox1" style="grid-row: 1/4; grid-column: 4/6;">
+      <div class="imagebox1" style="grid-row: 1/4; grid-column: 4/6; margin-right: 20px;">
         <img src="images/rf_importance.png" alt="rf_importance">
+        <p>Figure 4.2: Graph showing the feature importance in classifications for rf.</p>
       </div>
 
       <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
-        Here we give accuracy and stats
+        Random Forest got a <span style="color: darkred;">82.692%</span> prediction accuracy.
       </div>
     </div>
 
@@ -90,7 +97,7 @@
       </div>
 
       <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
-        Here we give accuracy and stats
+        Decision Tree got a <span style="color: darkred;">82.211%</span> prediction accuracy.
       </div>
     </div>
 
@@ -107,7 +114,7 @@
       </div>
 
       <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
-        Here we give accuracy and stats
+        Decision Tree got a <span style="color: darkred;">70.192%</span> prediction accuracy.
       </div>
     </div>
 
