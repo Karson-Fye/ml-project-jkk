@@ -53,13 +53,13 @@
     </div>
 
     <div class="title2">
-      Random Forest (rf)
+      Random Forest (RF)
     </div>
     <div class="gridcontainer" style="background-color: gray;">
       <div class="textbox1" style="grid-row: 1/3; grid-column: 1/4;">
         Random Forest splits the data into growing trees, using minute differences to classify and learn which 
         qualities generates teh expected outcome from each fearture. <br> <br>
-        The graph below (4.1) shows the <span style="color: darkgreen;">tree depth (n estimators)</span>
+        The graph below (4.1) shows the <span style="color: darkgreen;">number of randomness used (n estimators)</span>
         that predicts the at the <span style="color: darkgreen;">highest accuracy</span>. <br> <br>
         The graph on the right (4.2) shows the <span style="color: darkgreen;">
           importance of each feature</span> in its classifications. 
@@ -72,48 +72,61 @@
 
       <div class="imagebox1" style="grid-row: 1/4; grid-column: 4/6; margin-right: 20px;">
         <img src="images/rf_importance.png" alt="rf_importance">
-        <p>Figure 4.2: Graph showing the feature importance in classifications for rf.</p>
+        <p>Figure 4.2: Graph showing the feature importance <br> in classifications for RF.</p>
       </div>
 
-      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
+      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5; font-size: large;">
         Random Forest got a <span style="color: darkred;">82.692%</span> prediction accuracy.
       </div>
     </div>
 
     <div class="title2" style="background-color: whitesmoke; color: black;">
-      Decision Tree (dt)
+      Decision Tree (DT)
     </div>
     <div class="gridcontainer" style="background-color: whitesmoke;">
       <div class="textbox1" style="grid-row: 1/3; grid-column: 1/4;">
-        Info on dt
+        Decision trees use various algorithms which split a node into two or more predecessor nodes. 
+        For every split, the algorithm calculates the information gain and entropy of every unused 
+        attribute and then selects the highest. Then, it splits again and repeats the process with the 
+        unused features. This algorithm continues until all attributes are utilized. <br> <br>
+        The graph below (4.3) shows the <span style="color: darkgreen;">tree depth</span>
+        that predicts the at the <span style="color: darkgreen;">highest accuracy</span>. <br> <br>
+        The graph on the right (4.4) shows the <span style="color: darkgreen;">
+          importance of each feature</span> in its classifications.
       </div>
 
       <div class="imagebox1" style="grid-row: 3/4; grid-column: 1/4;">
         <img src="images/dt_error.png" alt="dt_error">
+        <p>Figure 4.3: Shows the error values based off the tree depth when utilizing DT.</p>
       </div>
 
-      <div class="imagebox1" style="grid-row: 1/4; grid-column: 4/6;">
+      <div class="imagebox1" style="grid-row: 1/4; grid-column: 4/6; margin-right: 20px;">
         <img src="images/dt_importance.png" alt="dt_importance">
+        <p>Figure 4.4: Graph showing the feature importance <br> in classifications for DT.</p>
       </div>
 
-      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
+      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5; font-size: large;">
         Decision Tree got a <span style="color: darkred;">82.211%</span> prediction accuracy.
       </div>
     </div>
 
     <div class="title2">
-      K-Nearest Neighbor (kn)
+      K-Nearest Neighbor (KNN)
     </div>
     <div class="gridcontainer" style="background-color: gray;">
       <div class="textbox1" style="grid-row: 1/2; grid-column: 1/4;">
-        Info on kn
+        KNN assumes that proximity is equivalent to similarity. Basing off this assumption, it tries to learn based off 
+        grabbing the nearest data points to create predictions. <br> <br>
+        The graph below (4.5) shows the <span style="color: darkgreen;">amount of nearest neighbors (k value)</span>
+        that predicts at the <span style="color: darkgreen;">highest accuracy</span>. <br> <br>
       </div>
 
       <div class="imagebox1" style="grid-row: 3/4; grid-column: 3/6;">
         <img src="images/kn_error.png" alt="kn_error">
+        <p>Figure 4.5: Graph showing the highest accuracy based on K value.</p>
       </div>
 
-      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5;">
+      <div class="textbox1" style="grid-row: 4/6; grid-column: 2/5; font-size: large;">
         Decision Tree got a <span style="color: darkred;">70.192%</span> prediction accuracy.
       </div>
     </div>
