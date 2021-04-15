@@ -1,58 +1,108 @@
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <head>
-        <title></title>
-        <link href="" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
-        <link href="style.css" rel="stylesheet">
-    </head>
+  <head>
+    <title></title>
+    <link href="" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    <link href="style.css" rel="stylesheet">
+  </head>
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">The Titanic</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="data.html">DataSet and Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="cleandata.html">Data Cleaning and Visualization</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="validation.html">Feature Validation</a>
-                </li>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="algorithms.html">Prediction Algorithms</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="results.html">Results</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="survive.html">Would You Survive?</a>
-              </li>
-              </ul>
-            </div>
-        </nav>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">The Titanic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">DataSet and Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cleandata.html">Data Cleaning and Visualization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="validation.html">Feature Validation</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="algorithms.html">Prediction Algorithms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="survive.html">Would You Survive?</a>
+          </li>
+          </ul>
+        </div>
+    </nav>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-      <script src="index.js"></script>
-    </body>
+    <!-- CODE -->
+    <div class="title">
+      The DataSet
+    </div>
+
+    <div class="textbox2" style="margin-top: 15px; font-size: large;">
+      Our team recieved this data set from <i>Kaggle.com</i>. <br>
+      The dataset includes all the retrieved data from the Titanic, and most importantly, who survived. 
+    </div>
+
+    <div class="gridcontainer">
+      <div class="imagebox1">
+        <img src="images/starting_data.png" alt="starting_data" 
+          style="max-width: 900px; min-width: 400px; grid-row: 1/3; grid-column: 1/4;">
+      </div>
+
+      <div class="textbox1" style="grid-row: 1/6; grid-column: 4/6;">
+        <b><i>The dataset features are explained below:</i></b> <br> <br>
+        <div class="textbox2" style="text-align: left;">
+          - <b>pclass:</b> Ticket Class <br>
+          - <b>survivied:</b> Survived or not <br>
+          - <b>name:</b> Name of passenger <br>
+          - <b>sex:</b> Male or female <br>
+          - <b>age:</b> Age of passenger <br>
+          - <b>sibsp:</b> # of siblings of passenger <br>
+          - <b>parch:</b> # of parents/children on board <br>
+          - <b>ticket:</b> Ticket Number <br>
+          - <b>fare:</b> Cost of ticket <br>
+          - <b>cabin:</b> Cabin number <br>
+          - <b>embarked:</b> Location boarded on <br>
+          - <b>boat:</b> Which boat the survivors made it out on <br>
+          - <b>body:</b> Weight of passenger (However, somewhat unclear) <br>
+          - <b>home.dest:</b> Destination 
+      </div>
+      </div>
+
+      <div class="textbox1" style="grid-row: 3/5; grid-column: 1/4;">
+        <h4>In total, the data set has <b>1309 people</b> and <b>14 features</b> collected for each.</h4>
+      </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Titanic Project
+        <br>
+        Made by Karson Fye, Jackson Warren, and Katelynn Schwerdtfeger
+      </div>
+    </footer>
+    <!-- CODE END -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
