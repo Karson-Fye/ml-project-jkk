@@ -96,13 +96,16 @@
       <div class="griadcontainer">
         <div class="textbox1">
           <h3><u>Discussion on Feature Validation</u></h3>
-          Both tests show that <span style="color: darkred;">'age', 'ticket', and 'sibsp'</span> 
+          Both our Chi-Squared and Pearson Correlation tests show that <span style="color: darkred;">'age', 'ticket', and 'sibsp'</span> 
           are less significant values. <br> <br>
-          Although both <span style="color: darkred;">'sibsp' and 'age'</span> proved to be insignficant 
-          based off both tests, we decided to keep all features for our study. <br> <br>
-          All the features in use increase accuracy, even if only slightly. 
-          Since <u>accuracy is our primary target</u> for this experiment (and not speed), we keep these features. <br> <br>
-          This information served as a metric to show us what features proved to be determining factors for survival. 
+          Although <span style="color: darkred;">'sibsp' and 'age'</span> proved to be insignficant 
+          based off both tests, we decided to only remove <span style="color: darkred;">'sibsp'</span> 
+          since its removal created a slight <span style="color: darkgreen;">increase in accuracy</span>. <br> <br>
+          <div class="textbox2" style="margin-top: 0px;">
+            This left us with <b><span style="color: darkgreen;">8 features</span></b>.
+          </div>
+          All remaining features increase accuracy, even if only slightly. 
+          Since <u>accuracy is our primary target</u> for this experiment (and not speed), we keep these features.
         </div>
       </div>
 
