@@ -1,20 +1,34 @@
-# from flask import Flask, render_template
 
+# from flask import Flask, render_template, request
 # app = Flask(__name__)
 
 # @app.route('/')
-# def index():
-#     return render_template('survived.html')
+# def hello():
+#     return "Hello World"
 
 # if __name__ == '__main__':
-#     app.run(debug=True)
+#     app.run()
 
-from flask import Flask
+from flask import Flask, render_template, request
+from wtforms import Form, TextAreaField, validators
+
 app = Flask(__name__)
 
+class HelloForm(Form):
+    sayhello = TextAreaField('',[validators.DataRequired()])
+
 @app.route('/')
+def index():
+    form = HelloForm(request.form)
+    return render_template('first_app.html', form=form)
+
+@app.route('/hello', methods=['POST'])
 def hello():
-    return "Hello World, bb!"
+    form = HelloForm(request.form)
+    if request.method == 'POST' and form.validate():
+        name = request.form['Input']
+        return render_template('hello.html', name=name)
+    return render_template('first_app.html', form=form)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
