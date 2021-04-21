@@ -15,7 +15,9 @@ from wtforms import Form, TextAreaField, validators
 app = Flask(__name__)
 
 class HelloForm(Form):
-    sayhello = TextAreaField('',[validators.DataRequired()])
+    n = TextAreaField('',[validators.DataRequired()])
+    g = TextAreaField('',[validators.DataRequired()])
+    a = TextAreaField('',[validators.DataRequired()])
 
 @app.route('/')
 def index():
@@ -26,8 +28,10 @@ def index():
 def hello():
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
-        name = request.form['Input']
-        return render_template('hello.html', name=name)
+        n = request.form['n']
+        g = request.form['g']
+        a = request.form['a']
+        return render_template('hello.html', name=n, gender=g, age=a)
     return render_template('first_app.html', form=form)
 
 if __name__ == '__main__':
