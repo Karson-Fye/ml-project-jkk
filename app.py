@@ -19,30 +19,41 @@ rf = pickle.load(open(os.path.join(cur_dir,
 def classify(data):
     label = {0: 'Eliminated', 1: 'Survived'}
     y = rf.predict(data)[0]
-    proba = np.max(rf.predict_proba(data))
+    proba = rf.predict_proba(data)
     return label[y], proba
 
 ######## Flask
 class HelloForm(Form):
-    n = TextAreaField('',[validators.DataRequired()])
-    g = TextAreaField('',[validators.DataRequired()])
-    a = TextAreaField('',[validators.DataRequired()])
+    name = TextAreaField('',[validators.DataRequired()])
+    sex = TextAreaField('',[validators.DataRequired()])
+    age = TextAreaField('',[validators.DataRequired()])
+    ticket = TextAreaField('',[validators.DataRequired()])
+    fare = TextAreaField('',[validators.DataRequired()])
+    clas = TextAreaField('',[validators.DataRequired()])
+    children = TextAreaField('',[validators.DataRequired()])
+    port = TextAreaField('',[validators.DataRequired()])
 
 @app.route('/')
 def index():
     form = HelloForm(request.form)
     return render_template('first_app.html', form=form)
 
-@app.route('/hello', methods=['POST'])
+@app.route('/survived', methods=['POST'])
 def hello():
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
-        n = request.form['n']
-        g = request.form['g']
-        a = request.form['a']
-        X = np.array([[0, 1, 400, 1, 2, 70, 10300]])
+        name = request.form['name']
+        sex = request.form['sex']
+        age = request.form['age']
+        ticket = request.form['ticket']
+        fare = request.form['fare']
+        clas = request.form['clas']
+        children = request.form['children']
+        port = request.form['port']
+
+        X = np.array([[sex, clas, fare, port, children, age, ticket]])
         y,proba = classify(X)
-        return render_template('survived.html', name=n, gender=g, age=a, sur=y, pro=proba)
+        return render_template('survived.html', name=name, sur=y, pro=proba*100)
     return render_template('first_app.html', form=form)
 
 if __name__ == '__main__':
