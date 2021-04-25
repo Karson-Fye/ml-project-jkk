@@ -5,6 +5,7 @@ import sqlite3
 import os
 import numpy as np
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ cur_dir = os.path.dirname(__file__)
 rf = pickle.load(open(os.path.join(cur_dir,
                  'pkl_objects',
                  'classifier.pkl'), 'rb'))
-db = os.path.join(cur_dir, 'reviews.sqlite')
+# db = os.path.join(cur_dir, 'reviews.sqlite')
 
 def classify(data):
     label = {0: 'Eliminated', 1: 'Survived'}
@@ -39,12 +40,9 @@ def hello():
         n = request.form['n']
         g = request.form['g']
         a = request.form['a']
-        X =np.arr([[1, 2, 200, 1, 2, 25, 10300]])
-        classify(X)
-
-        
-        y, proba = classify(review)
-        return render_template('hello.html', name=n, gender=g, age=a, survived=y, proba=proba)
+        X = np.array([[0, 1, 400, 1, 2, 70, 10300]])
+        y,proba = classify(X)
+        return render_template('survived.html', name=n, gender=g, age=a, sur=y, pro=proba)
     return render_template('first_app.html', form=form)
 
 if __name__ == '__main__':

@@ -9,8 +9,8 @@
         <link href="" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-        <link href="style.css" rel="stylesheet"> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
     <body>
@@ -46,6 +46,11 @@
               </ul>
             </div>
         </nav>
+
+        <div>
+          {{ name }} probably  {{ gender }} and {{ age }}<br />
+          {{ sur }} with a score of {{ pro }}
+        </div>
 
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
