@@ -44,10 +44,11 @@ def index():
 
 @app.route('/survived', methods=['POST'])
 def hello():
+    fem = ['f','female','woman','girl']
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
         name = request.form['name']
-        sex = request.form['sex']
+        sex = 0 if request.form['sex'].lower() in fem else 1
         age = request.form['age']
         ticket = request.form['ticket']
         fare = request.form['fare']
