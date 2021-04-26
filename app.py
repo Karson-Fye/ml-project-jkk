@@ -34,6 +34,10 @@ class HelloForm(Form):
     port = TextAreaField('',[validators.DataRequired()])
 
 @app.route('/')
+def indexpage():
+    return render_template('index.html')
+
+@app.route('/index')
 def index():
     form = HelloForm(request.form)
     return render_template('first_app.html', form=form)
@@ -55,6 +59,26 @@ def hello():
         y,proba = classify(X)
         return render_template('survived.html', name=name, sur=y, pro=proba*100)
     return render_template('first_app.html', form=form)
+
+@app.route('/algopage')
+def algopage():
+    return render_template('algorithms.html')
+
+@app.route('/cleandata')
+def cleandata():
+    return render_template('cleandata.html')
+
+@app.route('/data')
+def data():
+    return render_template('data.html')
+
+@app.route('/results')
+def results():
+    return render_template('results.html')
+
+@app.route('/validation')
+def validation():
+    return render_template('validation.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

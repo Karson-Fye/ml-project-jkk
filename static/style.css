@@ -1,6 +1,5 @@
 
 body {
-    margin-top: 20px;
     font-family: "Cairo", sans-serif;
 }
   
@@ -68,4 +67,11 @@ footer {
     margin: auto;
     background-color: lightgrey;
     border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 4px 0px 20px;
+    grid-gap: 20px 50px;
 }

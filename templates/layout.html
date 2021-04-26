@@ -3,7 +3,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <head>
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,8 +12,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for(index.html ) }}">The Titanic</a>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('indexpage') }}">The Titanic</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,26 +21,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('index') }}">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link {{ 'active' if active_page == 'indexpage' else '' }}" href="{{ url_for('indexpage') }}">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('data') }}">DataSet and Features</a>
+                    <a class="nav-link {{ 'active' if active_page == 'data' else '' }}" href="{{ url_for('data') }}">DataSet and Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('cleandata') }}">Data Cleaning and Visualization</a>
+                    <a class="nav-link {{ 'active' if active_page == 'cleandata' else '' }}" href="{{ url_for('cleandata') }}">Data Cleaning and Visualization</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('validation') }}">Feature Validation</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('algorithms') }}">Prediction Algorithms</a>
+                    <a class="nav-link {{ 'active' if active_page == 'validation' else '' }}" href="{{ url_for('validation') }}">Feature Validation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('results') }}">Results</a>
+                    <a class="nav-link {{ 'active' if active_page == 'algopage' else '' }}" href="{{ url_for('algopage') }}">Prediction Algorithms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('/') }}">Would You Survive?</a>
+                    <a class="nav-link {{ 'active' if active_page == 'results' else '' }}" href="{{ url_for('results') }}">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if active_page == 'index' else '' }}" href="{{ url_for('index') }}">Would You Survive?</a>
                 </li>
             </ul>
         </div>
