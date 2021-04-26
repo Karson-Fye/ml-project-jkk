@@ -1,3 +1,3 @@
-"use strict";
+'use strict';
 
-$('.carousel').carousel()
+$('.carousel').carousel();
