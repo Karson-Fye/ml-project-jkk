@@ -40,15 +40,16 @@ def indexpage():
 @app.route('/index')
 def index():
     form = HelloForm(request.form)
-    return render_template('first_app.html', form=form)
+    sex = ['Male', 'Female']
+    return render_template('first_app.html', form=form, sex=sex)
 
 @app.route('/survived', methods=['POST'])
 def hello():
-    fem = ['f','female','woman','girl']
+    # fem = ['f','female','woman','girl']
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
         name = request.form['name']
-        sex = 0 if request.form['sex'].lower() in fem else 1
+        sex = 0 if request.form['sex'] == 'Female' else 1
         age = request.form['age']
         ticket = request.form['ticket']
         fare = request.form['fare']

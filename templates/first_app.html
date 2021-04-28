@@ -2,62 +2,75 @@
 {% set active_page = "index" %}
 {% block content %}
 <div class="container" style="padding-top: 20px; text-align: center;">
-    {% from "_formhelpers.html" import render_field %}
-    <form method=post action="/survived">
-        <table style="width:100; margin:auto;">
-            <tr>
-                <th colspan="2">Please input the following!</th>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td>
-                    <dl>{{ render_field(form.name) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Sex</td>
-                <td>
-                    <dl>{{ render_field(form.sex) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Age</td>
-                <td>
-                    <dl>{{ render_field(form.age) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Ticket Number</td>
-                <td>
-                    <dl>{{ render_field(form.ticket) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Fare</td>
-                <td>
-                    <dl>{{ render_field(form.fare) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Class</td>
-                <td>
-                    <dl>{{ render_field(form.clas) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Children</td>
-                <td>
-                    <dl>{{ render_field(form.children) }}</dl>
-                </td>
-            </tr>
-            <tr>
-                <td>Port</td>
-                <td>
-                    <dl>{{ render_field(form.port) }}</dl>
-                </td>
-            </tr>
-        </table>
-        <input type=submit value='Submit' name='submit_btn'>
-    </form>
+    <div class="gridcontainer" style="background-color: rgb(240,240,240);">
+        <div class="imagebox1" style="width: auto; grid-column: 1/2; grid-row: 1/3; margin-right: 30px;">
+            <img src="{{ url_for('static', filename='images/titanic_sinking.gif') }}" alt="Titanic Sinking">
+        </div>
+        <div class="textbox1" style="grid-column: 3/6; grid-row: 1/3;">
+            {% from "_formhelpers.html" import render_field %}
+            <form method=post action="/survived">
+                <table style="width:100; margin:auto;">
+                    <tr>
+                        <th colspan="2">Please input the following!</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <dl>{{ render_field(form.name) }}</dl>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Sex</td>  <!--****Drop downs, bigger text(EVERYWHERE), explain input options -->
+                        <td>
+                            <select name="sex" method="GET" action="/survived">
+                                <option value="{{sex[0]}}" selected>{{sex[0]}}</option>
+                                {% for s in sex[1:] %}
+                                    <option value="{{ sex }}">{{ s }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>
+                            <dl>{{ render_field(form.age) }}</dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ticket Number</td>
+                        <td>
+                            <dl>{{ render_field(form.ticket) }}</dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fare</td>
+                        <td>
+                            <dl>{{ render_field(form.fare) }}</dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td>
+                            <dl>{{ render_field(form.clas) }}</dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Children</td>
+                        <td>
+                            <dl>{{ render_field(form.children) }}</dl>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Port</td>
+                        <td>
+                            <dl>{{ render_field(form.port) }}</dl>
+                        </td>
+                    </tr>
+                </table>
+                <input type=submit value='Submit' name='submit_btn'>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
