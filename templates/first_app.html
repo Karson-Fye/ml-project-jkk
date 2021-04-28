@@ -24,10 +24,8 @@
                         <td>Sex</td>  <!--****Drop downs, bigger text(EVERYWHERE), explain input options -->
                         <td>
                             <select name="sex" method="GET" action="/survived">
-                                <option value="{{sex[0]}}" selected>{{sex[0]}}</option>
-                                {% for s in sex[1:] %}
-                                    <option value="{{ sex }}">{{ s }}</option>
-                                {% endfor %}
+                                <option value=1 selected>Male</option>
+                                <option value=0>Female</option>
                             </select>
                         </td>
                     </tr>
@@ -52,19 +50,35 @@
                     <tr>
                         <td>Class</td>
                         <td>
-                            <dl>{{ render_field(form.clas) }}</dl>
+                            <select name="clas" method="GET" action="/survived">
+                                <option value=1 selected>First Class</option>
+                                <option value=2>Second Class</option>
+                                <option value=3>Third Class</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Children</td>
                         <td>
-                            <dl>{{ render_field(form.children) }}</dl>
+                            <select name="clas" method="GET" action="/survived">
+                                <option value=0 selected> 0 </option>
+                                <option value=1> 1 </option>
+                                <option value=2> 2 </option>
+                                <option value=3> 3 </option>
+                                <option value=4> 4 </option>
+                                <option value=5> 5 </option>
+                                <option value=6> 6 </option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Port</td>
                         <td>
-                            <dl>{{ render_field(form.port) }}</dl>
+                            <select name="port" method="GET" action="/survived">
+                                <option value=0 selected>Cherbourg</option>
+                                <option value=1>Queenstown</option>
+                                <option value=2>Southampton</option>
+                            </select>
                         </td>
                     </tr>
                 </table>

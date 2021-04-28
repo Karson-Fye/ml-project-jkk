@@ -3,7 +3,12 @@
 {% block content %}
 <div class="container" style="padding-top: 20px; text-align: center;">
   <div class="textbox1" style="grid-row: 3; grid-column: 1/2; font-size: large;">
-    {{ name }} is a {{ sex }} probably <span style="color: darkred;">{{ sur }}</span> with a score of <span style="color: darkred;">{{ pro }}</span>
+    {% if sur == "Eliminated" %}
+    There is a <span style="color: darkred;">{{ pro }}</span> chance that sp{{ name }} was <span style="color: darkred;">{{ sur.lower() }}</span>!
+    {% else %}
+    There is a <span style="color: darkgreen;">{{ pro }}</span> chance that sp{{ name }} was <span style="color: darkgreen;">{{ sur.lower() }}</span>!
+    {% endif %}
+    
   </div>
   <img class="d-block w-100" src="{{ url_for('static', filename='images/Titanic.jpeg') }}" alt="First slide">
 </div>

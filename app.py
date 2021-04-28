@@ -40,8 +40,7 @@ def indexpage():
 @app.route('/index')
 def index():
     form = HelloForm(request.form)
-    sex = ['Male', 'Female']
-    return render_template('first_app.html', form=form, sex=sex)
+    return render_template('first_app.html', form=form)
 
 @app.route('/survived', methods=['POST'])
 def hello():
@@ -49,7 +48,7 @@ def hello():
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
         name = request.form['name']
-        sex = 0 if request.form['sex'] == 'Female' else 1
+        sex = request.form['sex']
         age = request.form['age']
         ticket = request.form['ticket']
         fare = request.form['fare']
@@ -59,7 +58,7 @@ def hello():
 
         X = np.array([[sex, clas, fare, port, children, age, ticket]])
         y,proba = classify(X)
-        proba = str(max(max(proba))*100) + '%'
+        proba = str(round(np.max(proba)*100,2)) + '0%'
         return render_template('survived.html', name=name, sur=y, pro=proba)
     return render_template('first_app.html', form=form)
 
