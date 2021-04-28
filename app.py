@@ -58,7 +58,8 @@ def hello():
 
         X = np.array([[sex, clas, fare, port, children, age, ticket]])
         y,proba = classify(X)
-        return render_template('survived.html', name=name, sur=y, pro=proba*100)
+        proba = str(max(max(proba))*100) + '%'
+        return render_template('survived.html', name=name, sur=y, pro=proba)
     return render_template('first_app.html', form=form)
 
 @app.route('/algopage')

@@ -2,6 +2,16 @@
 {% set active_page = "index" %}
 {% block content %}
 <div class="container" style="padding-top: 20px; text-align: center;">
-  {{ name }} probably {{ sur }} with a score of {{ pro }}
+  <div class="textbox1" style="grid-row: 3; grid-column: 1/2; font-size: large;">
+    {{ name }} probably <span style="color: darkred;">{{ sur }}</span> with a score of <span style="color: darkred;">{{ pro }}</span>
+  </div>
+  <img class="d-block w-100" src="{{ url_for('static', filename='images/Titanic.jpeg') }}" alt="First slide">
 </div>
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      Titanic Project
+      <br>
+      Made by Karson Fye, Jackson Warren, and Katelynn Schwerdtfeger
+  </div>
+</footer>
 {% endblock %}
