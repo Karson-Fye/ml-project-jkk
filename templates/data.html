@@ -3,51 +3,43 @@
 {% block content %}
 <!-- CODE -->
 <div class="title">
-    The DataSet
+    Titanic Dataset and Features
 </div>
 
-<div class="textbox2" style="margin-top: 15px; font-size: large;">
-    Our team recieved this data set from <i>Kaggle.com</i>. <br>
+<div class="textbox2" style="margin-top: 15px;">
+    Our team recieved this data set from <i>OpenML.com</i>. <br>
     The dataset includes all the retrieved data from the Titanic, and most importantly, who survived.
 </div>
 
-<div class="gridcontainer">
-    <div class="imagebox1" style="margin: auto; grid-row: 1/3; grid-column: 1/6;">
-        <img src="{{ url_for('static', filename='images/starting_data.png') }}" alt="starting_data"
-            style="max-width: 95%; margin: auto; padding-left: 5%;">
-    </div>
-
-    <div class="textbox1" style="grid-row: 3/6; grid-column: 1/6;">
-        <b><i>The dataset features are explained below:</i></b> <br> <br>
-        <div class="textbox2" style="text-align: left;">
-            - <b>pclass:</b> Ticket Class (i.e. 1st class, 2nd class, 3rd class) <br>
-            - <b>survivied:</b> Survived or not <br>
-            - <b>name:</b> Name of passenger <br>
-            - <b>sex:</b> Male or female <br>
-            - <b>age:</b> Age of passenger <br>
-            - <b>sibsp:</b> # of siblings of passenger <br>
-            - <b>parch:</b> # of parents/children on board <br>
-            - <b>ticket:</b> Ticket Number <br>
-            - <b>fare:</b> Cost of ticket <br>
-            - <b>cabin:</b> Cabin number <br>
-            - <b>embarked:</b> Location boarded on (C = Cherbourg, Q = Queenstown, S = Southampton) <br>
-            - <b>boat:</b> Which boat the survivors made it out on <br>
-            - <b>body:</b> Weight of passenger (However, somewhat unclear) <br>
-            - <b>home.dest:</b> Destination
-        </div>
-    </div>
-
-    <div class="textbox1" style="grid-row: 6/7; grid-column: 1/6;">
-        <h4>In total, the data set has <b>1309 people</b> and <b>14 features</b> collected for each.</h4>
-    </div>
+<div class="imagebox1" style="margin: auto; grid-row: 1/3; grid-column: 1/6;">
+    <img src="{{ url_for('static', filename='images/starting_data.png') }}" alt="starting_data"
+        style="max-width: 95%; margin: auto; padding-left: 5%;">
 </div>
 
-<footer class="bg-light text-center text-lg-start">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Titanic Project
-        <br>
-        Made by Karson Fye, Jackson Warren, and Katelynn Schwerdtfeger
-    </div>
-</footer>
+<div class="textbox1" style="grid-row: 3/6; grid-column: 1/6;">
+    <p><b>The dataset features are explained below:</b></p>
+    <div class="textbox2" style="max-width:75%">
+        <table class="dark" style="margin:auto">
+            <tr><th>pclass</th><td>Ticket Class (i.e. 1st class, 2nd class, 3rd class)</td></tr>
+            <tr><th>survived</th><td>Survived or not</td></tr>
+            <tr><th>name</th><td>Name of passenger</td></tr>
+            <tr><th>sex</th><td>Male or female</td></tr>
+            <tr><th>age</th><td>Age of passenger</td></tr>
+            <tr><th>sibsp</th><td># of siblings of passenger</td></tr>
+            <tr><th>parch</th><td># of parents/children on board</td></tr>
+            <tr><th>ticket</th><td>Ticket Number</td></tr>
+            <tr><th>fare</th><td>Cost of ticket</td></tr>
+            <tr><th>cabin</th><td>Cabin number</td></tr>
+            <tr><th>embarked</th><td>Location boarded on (C = Cherbourg, Q = Queenstown, S = Southampton)</td></tr>
+            <tr><th>boat</th><td>Which boat the survivors made it out on</td></tr>
+            <tr><th>body</th><td>Weight of passenger (However, somewhat unclear)</td></tr>
+            <tr><th>home.dest</th><td>Destination</td></tr>
+        </table>
+    </div>  
+</div>
+
+<div class="textbox1">
+    <h4>In total, the data set has <b>1309 people</b> and <b>14 features</b> collected for each.</h4>
+</div>
 <!-- CODE END -->
 {% endblock %}

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ url_for('indexpage') }}">The Titanic</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +24,10 @@
                     <a class="nav-link {{ 'active' if active_page == 'indexpage' else '' }}" href="{{ url_for('indexpage') }}">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ 'active' if active_page == 'data' else '' }}" href="{{ url_for('data') }}">DataSet and Features</a>
+                    <a class="nav-link {{ 'active' if active_page == 'data' else '' }}" href="{{ url_for('data') }}">Titanic Dataset</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ 'active' if active_page == 'cleandata' else '' }}" href="{{ url_for('cleandata') }}">Data Cleaning and Visualization</a>
+                    <a class="nav-link {{ 'active' if active_page == 'cleandata' else '' }}" href="{{ url_for('cleandata') }}">Features</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ 'active' if active_page == 'validation' else '' }}" href="{{ url_for('validation') }}">Feature Validation</a>
@@ -44,10 +44,17 @@
             </ul>
         </div>
     </nav>
-
+    <div class="container" style="padding-top: 20px; text-align: center;">
     {% block content %}
     {% endblock %}
-
+    </div>
+    <footer class="bg-dark text-center text-lg-start">
+        <div class="text-center p-3">
+            Titanic Project
+            <br>
+            Made by Karson Fye, Jackson Warren, and Katelynn Schwerdtfeger
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

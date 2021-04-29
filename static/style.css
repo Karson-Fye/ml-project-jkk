@@ -1,10 +1,36 @@
 body {
     font-family: "Cairo", sans-serif;
+    background-color: darkgray;
 }
   
 footer {
     margin-top: 1em;
-    background-color: #e7e7e7;
+    color: whitesmoke;
+}
+
+.dark {
+    padding: 10px;
+    background-color: #4B515D;
+    color: whitesmoke;
+    margin: auto;
+}
+
+table.dark {
+    margin:auto;
+    border-collapse: separate;
+    border-spacing: 40px 5px;
+}
+
+table.dark > td, th {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+table.dark > th {
+    max-width: 100%;
+}
+table.dark > td {
+    max-width: 80px;
 }
 
 .gridcontainer {
@@ -15,9 +41,10 @@ footer {
 }
 
 .textbox1 {
+    font-size: 20px;
     text-align: center;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: lightgrey;
     border-radius: 10px;
 }
@@ -29,16 +56,18 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 75%;
-    background-color: grey;
+    background-color: #4B515D;
     color: white;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .title {
     text-align: center;
-    padding: 20px;
-    margin: auto;
-    background-color: whitesmoke;
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    color: whitesmoke;
+    background-color: #2E2E2E;
     border-radius: 10px;
     font-size: xx-large;
     text-decoration: underline;
@@ -73,4 +102,9 @@ footer {
     flex-wrap: wrap;
     padding: 0px 4px 0px 20px;
     grid-gap: 20px 50px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
 }
