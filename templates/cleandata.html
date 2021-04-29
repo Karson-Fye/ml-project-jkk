@@ -6,33 +6,33 @@
     Cleaning Data and Data Visualization
 </div>
 
-<div class="gridcontainer" style="background-color: whitesmoke;">
-    <div class="textbox1" style="grid-column: 1/3; grid-row: 1/2;">
-        <h5><b>Removing Features</b></h5>
+<div class="gridcontainer textbox1">
+    <div class="subtitle" style="grid-column: 1/3; grid-row: 1/2;">
+        Removing Features
     </div>
-    <div class="textbox2" style="grid-column: 2/6; grid-row: 2/3; text-align: left;">
-        - <b>name:</b> Name will not aid in or prediction algorithms <br>
-        - <b>home.dest:</b> Their ultimate destination will not determine their survival either <br>
-        - <b>body:</b> This feature had many missing data points and was unclear as to its use. <br>
-        - <b>cabin:</b> This feature was unclear, and was unable to be used as a result <br>
-        - <b>boat:</b> Once they have survived, which boat they got onto to survive was irrelevant <br>
-    </div>
+    <table class="dark" style="border-radius: 10px; margin:auto; grid-column: 2/6; grid-row: 2/3; text-align: left;">
+        <tr><th>name</th><td>Name will not aid in or prediction algorithms</td></tr>
+        <tr><th>home.dest</th><td>Their ultimate destination will not determine their survival either</td></tr>
+        <tr><th>body</th><td>This feature had many missing data points and was unclear as to its use</td></tr>
+        <tr><th>cabin</th><td>This feature was unclear, and was unable to be used as a result</td></tr>
+        <tr><th>boat</th><td>Once they have survived, which boat they got onto to survive was irrelevant</td></tr>
+    </table>
 </div>
 
 <div class="gridcontainer">
-    <h5 class="textbox1" style="grid-row: 1;"><b>New Data With Removed Features</b></h5>
+    <div class="subtitle">New Data With Removed Features</div>
 
     <img src="{{ url_for('static', filename='images/data_no_features.png') }}" alt="data head with updated features"
         style="margin: auto; width: 75%; margin-bottom: 20px; grid-row: 2/3;">
 </div>
 
-<div class="gridcontainer" style="background-color: whitesmoke;">
-    <h5 class="textbox1" style="grid-row: 1; grid-column: 3/5;"><b>Cleaned Data</b></h5>
+<div class="gridcontainer textbox1">
+    <h5 class="subtitle" style="grid-row: 1; grid-column: 3/5;"><b>Cleaned Data</b></h5>
 
     <img src="{{ url_for('static', filename='images/cleaned_data.png') }}" alt="data head with updated features"
-        style="margin: auto; width: 100%; max-width: 700px; margin-bottom: 20px; grid-row: 2/3; grid-column: 3/5;">
+        style="margin: auto; grid-row: 5/6; grid-column: 1/5; max-width: 75%;">
 
-    <div class="textbox1" style="grid-row: 1/5; grid-column: 1/3; max-width: 550px;">
+    <div class="textbox2" style="grid-row: 1/5; grid-column: 1/3; max-width: 550px;">
         <b>To clean the Data:</b> <br> <br>
         - Changed 'sex' and 'embarked' to numeric values <br>
         - Sex: female = '0', male = '1' <br>
@@ -40,22 +40,19 @@
         - Change age to an integer <br>
         - Made sure all values are numeric
     </div>
-
-    <div class="textbox1" style="grid-row: 5/6; grid-column: 1/5;">
-        <div class="textbox2">
-            Next, we <span style="color: darkred;">removed samples with missing data</span>,
+    <div class="textbox2" style="grid-row: 2/3; grid-column: 3/5;">
+        <div class="dark">
+            Next, we <span style="color: orangered;">removed samples with missing data</span>,
             leaving us with a complete dataset and no NaN values (or ?'s').
         </div>
-        <div class="textbox1" style="background-color: white; width: 75%; margin: auto;">
+        <div class="light">
             This left us with <b><span style="color: darkgreen;">1039 complete samples</span></b>,
             each having <b><span style="color: darkgreen;">9 features</span></b>.
         </div>
     </div>
 </div>
 
-<div class="textbox1">
-    <h5><b>Feature Visualization</b></h5>
-</div>
+<div class="subtitle" style="width: 40%; margin: 20px auto;">Feature Visualization</div>
 {% set features = ['../static/images/embarked.png', '../static/images/fare.png', '../static/images/parch.png', '../static/images/pclass.png',
                    '../static/images/sex.png', '../static/images/sibsp.png', '../static/images/ticket.png', '../static/images/age.png'] %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="text-align: center; margin:auto;">
