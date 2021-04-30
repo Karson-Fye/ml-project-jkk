@@ -4,20 +4,18 @@
 <div class="title">
     Classifier Results
 </div>
-<div class="gridcontainer" style="background-color: rgb(240,240,240);">
-    <div class="textbox1" style="grid-column: 1 / span 2; grid-row: 1;">
-        <b style="font-size: large;">Accuracy Plot:</b> <br> 
+<div style="background-color: #2E2E2E; padding: 10px 2%;">
+    <div class="textbox1">
+        <b>Accuracy Plot:</b> <br> 
         This shows the differences in accuracy found for all six classifiers that we applied to the Titanic dataset.
     </div>
-    <div class="textbox1" style="grid-column: 1 / span 2; grid-row: 2;">
-        <!-- <b style="font-size: large;">Accuracy Plot:</b> <br> <br> -->
-        As shown in the plot here, we found the Random Forest classifier to have the highest accuracy. 
-        After changing the classifying elements for Random Forest to get the highest accuracy, we implemented
-        the RF classifier to run with user inputs and determine if the user would have survived the Titanic.
-    </div>
-
-    <div class="imagebox1" style="width: auto; grid-column: 3; grid-row: 1 / span 3; margin-right: 30px;">
+    <div class="imagebox1">
         <img src="{{ url_for('static', filename='images/ClassResults.png') }}" alt="heatmap">
+    </div>
+    <div class="textbox1">
+        As shown in the plot here, we found the Random Forest classifier to have the highest accuracy. 
+        After tuning the classifying parameters for Random Forest to get the highest accuracy, we implemented
+        the RF classifier to run with user inputs. Now we can determine if the user would have survived the Titanic!      :-D
     </div>
 </div>
 {% endblock %}

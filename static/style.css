@@ -66,7 +66,7 @@ table.dark > td, th {
 .title {
     text-align: center;
     padding: 10px;
-    margin: 0 auto 20px auto;
+    margin: 0px auto 20px auto;
     color: whitesmoke;
     background-color: #2E2E2E;
     border-radius: 10px;
@@ -123,4 +123,23 @@ table.dark > td, th {
 
 img {
     max-width: 100%;
+}
+
+.app {
+    margin:auto;
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+    width:100%;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+span {
+    font-weight: bold;
+}
+
+select {
+    font-size: 20px;
+    height: 34px;
+    min-width: 80px;
 }

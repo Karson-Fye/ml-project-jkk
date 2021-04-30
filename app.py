@@ -25,13 +25,13 @@ def classify(data):
 ######## Flask
 class HelloForm(Form):
     name = TextAreaField('',[validators.DataRequired()])
-    sex = TextAreaField('',[validators.DataRequired()])
+    sex = TextAreaField('')
     age = TextAreaField('',[validators.DataRequired()])
     ticket = TextAreaField('',[validators.DataRequired()])
     fare = TextAreaField('',[validators.DataRequired()])
-    clas = TextAreaField('',[validators.DataRequired()])
-    children = TextAreaField('',[validators.DataRequired()])
-    port = TextAreaField('',[validators.DataRequired()])
+    clas = TextAreaField('')
+    children = TextAreaField('')
+    port = TextAreaField('')
 
 @app.route('/')
 def indexpage():
@@ -44,7 +44,6 @@ def index():
 
 @app.route('/survived', methods=['POST'])
 def hello():
-    # fem = ['f','female','woman','girl']
     form = HelloForm(request.form)
     if request.method == 'POST' and form.validate():
         name = request.form['name']
